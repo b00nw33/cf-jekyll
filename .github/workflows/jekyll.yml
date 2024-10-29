@@ -46,6 +46,7 @@ jobs:
         # Change directory to 'cf-jekyll' and run Jekyll build
         run: |
           cd cf-jekyll
+          gem install jekyll
           bundle exec jekyll build --destination ../_site --baseurl "${{ steps.pages.outputs.base_path }}"
       # - name: Build with Jekyll
       #   # Outputs to the './_site' directory by default
